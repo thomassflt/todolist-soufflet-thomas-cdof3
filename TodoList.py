@@ -18,8 +18,28 @@ class TodoList:
         except IndexError:
             print("Invalid task number.")
 
+    def check_save(self):
+        if(os.path.isfile("save.txt")):
+            print("A save has been found\n")
+            with open('save.txt', 'r') as f:
+                for ligne in f:
+                    ligne=ligne.replace("\n","")
+                    self.add_task(ligne)
+        else:
+            print("There is no save\n")
+
+    def save_tasks(self):
+        with open('save.txt', 'w') as f:
+            for i, task in enumerate(self.tasks, 1):
+                f.write(f"{task}\n")
+
+
+
+
 if __name__ == "__main__":
     todo_list = TodoList()
+    todo_list.check_save()
+    todo_list.view_tasks()
     while True:
         os.system('clear')
         print("Todo List:\n")
@@ -43,6 +63,7 @@ if __name__ == "__main__":
             except ValueError:
                 print("Task number must be an integer.")
         elif command == "q":
+            todo_list.save_tasks()
             break
         else:
             print("Invalid command.")
