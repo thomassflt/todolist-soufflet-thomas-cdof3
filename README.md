@@ -46,7 +46,7 @@ This application can be deployed on any system with Python installed. Simply clo
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](link) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Authors
