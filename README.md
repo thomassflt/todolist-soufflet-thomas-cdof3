@@ -29,10 +29,7 @@ Navigate to the project directory:
 ```
 cd todolist-soufflet-thomas-cdof3
 ```
-Give the right to TodoList.py:
-```
-chmod +x TodoList.py
-```
+
 Run the application:
 ```
 python3 TodoList.py
